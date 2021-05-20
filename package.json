@@ -5,6 +5,13 @@
   "repository": "https://github.com/kainiklas/cap-covid-tracker.git",
   "license": "UNLICENSED",
   "private": true,
+  "bugs": {
+    "url": "https://github.com/kainiklas/cap-covid-tracker/issues"
+  },
+  "author": {
+    "name": "Kai Niklas <info@kai-niklas.de>",
+    "url": "https://kai-niklas.de"
+  },
   "dependencies": {
     "@sap/cds": "^5",
     "express": "^4"

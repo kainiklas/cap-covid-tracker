@@ -4,7 +4,7 @@ This is a sample project to evaluate and explore some capabilities of SAP CAP an
 
 The goal was to better understand and learn how to:
 
-- Call a **remote service** with standard SAP CAP capabilities
+- Call a **remote service** with standard SAP CAP APIs
 - Explore options to map **REST to OData Services**
 - Visualize Data with **Fiori Elements**
 
@@ -24,12 +24,15 @@ The goal was to better understand and learn how to:
 | `package.json` | project metadata and configuration  |
 | `.cdsrc.json`  | config file for CAP                 |
 
-## Steps for development
+## Run the application
 
 - Open a new terminal and run `cds watch`
 - (in VS Code simply choose _**Terminal** > Run Task > cds watch_)
 - Open <http://localhost:4004>
+- Choose the build-in Fiori-Preview option of the Service `srv.CovidService/Countries`: <http://localhost:4004/$fiori-preview/srv.CovidService/Countries#preview-app>
 
-## Learn More about SAP CAP
+## Learn more
 
-Learn more at <https://cap.cloud.sap/docs/get-started/>.
+Find more information about this repository in my blog post
+
+- [SAP CAP Remote Services & SAP Fiori Elements](https://blog.kai-niklas.de/posts/9-sap-cap-remote-services-fiori-elements)
