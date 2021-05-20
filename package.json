@@ -14,13 +14,14 @@
   },
   "dependencies": {
     "@sap/cds": "^5",
-    "express": "^4",
+    "express": "^4"
+  },
+  "devDependencies": {
     "@sap/ux-specification": "^1.84.10",
     "sqlite3": "^5.0.2"
   },
-  "devDependencies": {},
   "scripts": {
-    "start": "cds watch",
+    "start": "cds run",
     "watch": "cds watch"
   },
   "eslintConfig": {
