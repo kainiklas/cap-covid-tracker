@@ -2,12 +2,9 @@ namespace srv;
 
 using {db} from '../db/Covid';
 
-service CovidService {
-
-    @readonly
+service AdminCovidService @(requires: 'authenticated-user') {
     entity Countries as projection on db.Countries;
-
-    @readonly
     entity CountryHistoryDetails as projection on db.CountryHistoryDetails;
+    entity Migrations as projection on db.Migrations;
 }
 
