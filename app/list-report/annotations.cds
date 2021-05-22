@@ -1,0 +1,1 @@
+using srv.CovidService as service from '../../srv/CovidService';
