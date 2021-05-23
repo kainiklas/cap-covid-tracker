@@ -18,11 +18,10 @@
   },
   "devDependencies": {
     "@sap/ux-specification": "^1.84.10",
-    "sqlite3": "^5.0.2",
-    "@sap/cds-dk": "^4"
+    "sqlite3": "^5.0.2"
   },
   "scripts": {
-    "start": "cds watch",
+    "start": "cds run",
     "watch": "cds watch"
   },
   "eslintConfig": {
