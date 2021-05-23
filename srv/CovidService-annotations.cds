@@ -36,6 +36,11 @@ annotate srv.CovidService.Countries with @(UI : {
         Value : TotalDeaths,
         Title : 'Total Deaths',
     },
+    DataPoint#Date  : {
+        $Type : 'UI.DataPointType',
+        Value : Date,
+        Title : 'Last Update',
+    },
     HeaderFacets  : [
         {
             $Type : 'UI.ReferenceFacet',
@@ -45,6 +50,10 @@ annotate srv.CovidService.Countries with @(UI : {
             $Type : 'UI.ReferenceFacet',
             Target : '@UI.DataPoint#TotalDeaths'
         },
+        {
+            $Type : 'UI.ReferenceFacet',
+            Target : '@UI.DataPoint#Date'
+        }
     ],
     Facets : [
         {
