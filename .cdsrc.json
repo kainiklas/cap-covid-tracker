@@ -7,10 +7,5 @@
                 "destination": "Covid19Api"
             }
         }
-    },
-    "auth": {
-        "passport": {
-            "strategy": "mock"
-        }
     }
 }
