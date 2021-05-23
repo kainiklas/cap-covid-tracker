@@ -4,8 +4,13 @@
             "kind": "rest",
             "impl": "srv/external/Covid19Api.js",
             "credentials": {
-                "url": "https://api.covid19api.com"
+                "destination": "Covid19Api"
             }
+        }
+    },
+    "auth": {
+        "passport": {
+            "strategy": "mock"
         }
     }
 }

@@ -7,8 +7,8 @@
         "applicationVersion": {
             "version": "1.0.0"
         },
-        "title": "{{appTitle}}",
-        "description": "{{appDescription}}",
+        "title": "Covid-19 Tracker",
+        "description": "List Report for Covid-19",
         "dataSources": {
             "mainService": {
                 "uri": "/covid/",
@@ -81,11 +81,11 @@
                     "name": "CountriesObjectPage",
                     "target": "CountriesObjectPage"
                 },
-                    {
-                        "pattern": "Countries({key})/CountryHistoryDetails({key2}):?query:",
-                        "name": "CountryHistoryDetailsObjectPage",
-                        "target": "CountryHistoryDetailsObjectPage"
-                    }
+                {
+                    "pattern": "Countries({key})/CountryHistoryDetails({key2}):?query:",
+                    "name": "CountryHistoryDetailsObjectPage",
+                    "target": "CountryHistoryDetailsObjectPage"
+                }
             ],
             "targets": {
                 "CountriesList": {
@@ -102,6 +102,10 @@
                                         "route": "CountriesObjectPage"
                                     }
                                 }
+                            },
+                            "initialLoad": true,
+                            "controlConfiguration": {
+                                "@com.sap.vocabularies.UI.v1.LineItem": {}
                             }
                         }
                     }
@@ -113,26 +117,29 @@
                     "options": {
                         "settings": {
                             "entitySet": "Countries",
-                                "navigation": {
-                                    "CountryHistoryDetails": {
-                                        "detail": {
-                                            "route": "CountryHistoryDetailsObjectPage"
-                                        }
+                            "navigation": {
+                                "CountryHistoryDetails": {
+                                    "detail": {
+                                        "route": "CountryHistoryDetailsObjectPage"
                                     }
                                 }
+                            },
+                            "content": {}
                         }
                     }
                 },
-                    "CountryHistoryDetailsObjectPage": {
-                        "type": "Component",
-                        "id": "CountryHistoryDetailsObjectPage",
-                        "name": "sap.fe.templates.ObjectPage",
-                        "options": {
-                            "settings": {
-                                "entitySet": "CountryHistoryDetails"
-                            }
+                "CountryHistoryDetailsObjectPage": {
+                    "type": "Component",
+                    "id": "CountryHistoryDetailsObjectPage",
+                    "name": "sap.fe.templates.ObjectPage",
+                    "options": {
+                        "settings": {
+                            "entitySet": "CountryHistoryDetails",
+                            "navigation": {},
+                            "content": {}
                         }
                     }
+                }
             }
         },
         "contentDensities": {
