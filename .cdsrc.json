@@ -6,6 +6,9 @@
             "credentials": {
                 "destination": "Covid19Api"
             }
+        },
+        "db": {
+            "kind": "sqlite"
         }
     }
 }

@@ -21,7 +21,7 @@
     "@sap/ux-specification": "^1.84.11"
   },
   "scripts": {
-    "start": "cds run",
+    "start": "cds deploy && cds run",
     "watch": "cds watch"
   },
   "eslintConfig": {
@@ -51,12 +51,5 @@
   },
   "sapux": [
     "app\\list-report"
-  ],
-  "cds": {
-    "requires": {
-      "db": {
-        "kind": "sqlite"
-      }
-    }
-  }
+  ]
 }
