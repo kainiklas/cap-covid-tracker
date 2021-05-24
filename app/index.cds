@@ -1,2 +1,2 @@
 
-using from './list-report\annotations';
+using from './list-report/annotations';
