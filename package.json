@@ -21,7 +21,7 @@
     "@sap/ux-specification": "^1.84.11"
   },
   "scripts": {
-    "start": "cds deploy && cds run",
+    "start": "npx cds deploy && npx cds run",
     "watch": "cds watch"
   },
   "eslintConfig": {
