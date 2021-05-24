@@ -23,7 +23,7 @@
   "scripts": {
     "start": "cds deploy && cds run",
     "watch": "cds watch",
-    "heroku-prebuild": "npm i \"@sap/cds-dk\""
+    "heroku-postbuild": "npm i \"@sap/cds-dk\""
   },
   "eslintConfig": {
     "extends": "eslint:recommended",
