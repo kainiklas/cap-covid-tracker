@@ -21,8 +21,9 @@
     "@sap/ux-specification": "^1.84.11"
   },
   "scripts": {
-    "start": "npx cds deploy && npx cds run",
-    "watch": "cds watch"
+    "start": "cds deploy && cds run",
+    "watch": "cds watch",
+    "heroku-postbuild": "npm i \"@sap/cds-dk\""
   },
   "eslintConfig": {
     "extends": "eslint:recommended",
