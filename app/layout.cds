@@ -1,4 +1,4 @@
-using {srv} from './CovidService';
+using {srv} from '../srv/CovidService';
 
 annotate srv.CovidService.Countries with @(UI : {
     Identification  : [{Value : Country}],
