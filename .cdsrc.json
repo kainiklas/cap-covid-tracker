@@ -10,12 +10,5 @@
         "db": {
             "kind": "sqlite"
         }
-    },
-    "build": {
-        "target": "gen",
-        "tasks": [
-          {"for":"fiori",   "src":"app"},
-          {"for":"node-cf", "src":"srv", "options": {"model": ["db","srv"] }}
-        ]
-      }
+    }
 }

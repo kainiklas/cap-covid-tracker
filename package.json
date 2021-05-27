@@ -13,15 +13,17 @@
     "url": "https://kai-niklas.de"
   },
   "dependencies": {
-    "@sap/cds": "^5",
-    "express": "^4",
+    "@sap/cds": "^5.1.5",
+    "@sap/cds-dk": "^3.5.1",
+    "express": "^4.17.1",
     "sqlite3": "^5.0.2"
   },
   "devDependencies": {
     "@sap/ux-specification": "^1.84.11"
   },
   "scripts": {
-    "start": "cds deploy && cds run",
+    "start": "cds run",
+    "deploy": "cds deploy --to sqlite --no-save",
     "watch": "cds watch",
     "heroku-postbuild": "npm i \"@sap/cds-dk\""
   },
