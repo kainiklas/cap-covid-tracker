@@ -31,6 +31,12 @@ The goal was to better understand and learn how to:
 - Open <http://localhost:4004>
 - Choose the build-in Fiori-Preview option of the Service `srv.CovidService/Countries`: <http://localhost:4004/$fiori-preview/srv.CovidService/Countries#preview-app>
 
+## Docker
+
+- Build the docker container: `docker build -t covid-tracker .`
+- Run the docker container and expose the running port: `docker run -p 4004:4004 -t covid-tracker`
+- sh into docker container to check whats going on inside: `docker run -i -t covid-tracker /bin/sh`
+
 ## Learn more
 
 Find more information about this repository in my blog post
