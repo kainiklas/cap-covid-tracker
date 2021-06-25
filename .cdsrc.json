@@ -8,7 +8,13 @@
             }
         },
         "db": {
-            "kind": "sqlite"
+            "kind": "sqlite",
+            "credentials": {
+                "database": ":memory:"
+            }
         }
+    },
+    "features": {
+        "in_memory_db": true
     }
 }
