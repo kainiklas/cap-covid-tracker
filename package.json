@@ -14,12 +14,12 @@
   },
   "dependencies": {
     "@sap/cds": "^5.1.5",
-    "@sap/cds-dk": "^3.5.1",
     "express": "^4.17.1",
     "sqlite3": "^5.0.2"
   },
   "devDependencies": {
-    "@sap/ux-specification": "^1.84.11"
+    "@sap/cds-dk": "^3.5.1",
+    "@sap/ux-specification": "^1.90.1"
   },
   "scripts": {
     "start": "cds run",
