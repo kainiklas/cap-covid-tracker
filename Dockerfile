@@ -8,11 +8,11 @@ WORKDIR /usr/src/app
 COPY . .
 
 # install dependencies
-RUN npm ci --only=production
+RUN npm ci
 
-# deploy sqlite db
-RUN npm i "@sap/cds-dk"
-RUN npm run deploy
+## deploy sqlite db
+#RUN npm i "@sap/cds-dk"
+#RUN npm run deploy
 
 ## run cap
 EXPOSE 4004
