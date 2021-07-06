@@ -34,8 +34,13 @@ The goal was to better understand and learn how to:
 ## Docker
 
 - Build the docker container: `docker build -t covid-tracker .`
-- Run the docker container and expose the running port: `docker run -p 4004:4004 -t covid-tracker`
+- Run the docker container and expose the running port: `docker run -p 80:4004 -t covid-tracker`
 - sh into docker container to check whats going on inside: `docker run -i -t covid-tracker /bin/sh`
+
+Publish to Docker Hub:
+
+- Tag the container: `docker tag covid-tracker kniklas/cap-covid-tracker`
+- Publish `docker push kniklas/cap-covid-tracker`
 
 ## Learn more
 
