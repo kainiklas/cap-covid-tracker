@@ -1,19 +1,16 @@
 FROM node:14-alpine
 
-# we want to run in productive mode
+# use productive environment
 ENV NODE_ENV production
 
-# copy source
+# copy source as node user
 WORKDIR /usr/src/app
-COPY . .
+COPY --chown=node:node . .
 
 # install dependencies
-RUN npm ci
+RUN npm ci --only=production
 
-## deploy sqlite db
-#RUN npm i "@sap/cds-dk"
-#RUN npm run deploy
-
-## run cap
+# run app as node user
 EXPOSE 4004
+USER node
 CMD ["npm", "start"]
