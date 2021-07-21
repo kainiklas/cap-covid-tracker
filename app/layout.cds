@@ -109,6 +109,7 @@ annotate srv.CovidService.CountryHistoryDetails with @(UI : {
 });
 
 annotate srv.CovidService.CountryHistoryDetails with @( 
+    Aggregation.ApplySupported.PropertyRestrictions: true,
     Analytics.AggregatedProperties : [ 
         { 
             Name : 'deaths', 
