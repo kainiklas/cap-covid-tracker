@@ -22,9 +22,7 @@
   },
   "scripts": {
     "start": "cds run",
-    "deploy": "cds deploy --to sqlite --no-save",
     "watch": "cds watch",
-    "heroku-postbuild": "npm i \"@sap/cds-dk\"",
     "docker-build": "docker build -t kniklas/cap-covid-tracker .",
     "docker-run": "docker run -p 80:4004 -t kniklas/cap-covid-tracker"
   },
