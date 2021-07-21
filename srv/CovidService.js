@@ -1,20 +1,32 @@
 const cds = require("@sap/cds");
+const DEBUG = cds.debug("covid-service");
 
 module.exports = cds.service.impl(async function () {
   const db = await cds.connect.to("db");
   const { Migrations, Countries, CountryHistoryDetails } = db.entities;
 
-  this.before("READ", "Countries", async (req, next) => {
-    // check if filled; then no need to execute
+  function getYesterdayDate() {
+    return new Date(Date.now() - 86400000).toISOString(); // 24 * 60 * 60 * 1000 milliseconds
+  }
 
+  this.before("READ", "Countries", async (req, next) => {
     let migrations = await db.read(Migrations).where({
       table: "Countries",
       selector: "summary",
+      date: { ">=": getYesterdayDate() },
     });
 
+    // check for cached values
     if (migrations.length !== 0) {
+      DEBUG && DEBUG("Countries - Cache Hit");
       return;
     }
+
+    // delete cache
+    await db.delete(Migrations).where({
+      table: "Countries",
+      selector: "summary",
+    });
 
     // delete all countries
     await db.delete(Countries);
@@ -42,11 +54,19 @@ module.exports = cds.service.impl(async function () {
     let migrations = await db.read(Migrations).where({
       table: "CountryHistoryDetails",
       selector: country,
+      date: { ">=": getYesterdayDate() },
     });
 
     if (migrations.length !== 0) {
+      DEBUG && DEBUG("Countries/CountryHistoryDetails - Cache Hit - ", country);
       return;
     }
+
+    // delete cache
+    await db.delete(Migrations).where({
+      table: "CountryHistoryDetails",
+      selector: country,
+    });
 
     // delete all history information
     try {
